@@ -1,0 +1,150 @@
+
+
+html, body
+  padding: 0
+  margin: 0
+
+
+/// header
+
+header.back
+  position: relative
+  height: 400px
+  background:
+    image : url('../images/header-background.jpg')
+    size : cover
+    position: top center
+    attachment : fixed
+  overflow: hidden
+
+
+.back-text
+  height: 150px
+  width: 100%
+  background:
+    image: url('../images/header-text.png')
+    position: center
+    repeat: no-repeat
+  position: absolute
+  top: 50%
+  margin-top: -50px
+  z-index: 100
+
+.stylo
+  width: 454px
+  height: 454px
+  background:
+    image : url('../images/header-plume.png')
+    position: right bottom
+    repeat : no-repeat
+  position: absolute
+  left: 100%
+  margin-left: -454px
+  top: 60px
+
+.encreur
+  width: 480px
+  height: 190px
+  background:
+    image : url('../images/header-encrier.png')
+    repeat : no-repeat
+    position: top left
+  position: absolute
+  left: 5%
+  top: 140px
+
+section
+  margin-bottom: 50px
+  text-align: center
+
+.article
+  height: auto
+  text-align: center
+  margin-top: 40px
+  .hr
+    width: 40%
+    height: 5px
+    border-bottom: lightgrey 1px solid
+    margin-top: 20px
+    margin-bottom: 20px
+    margin-left: auto
+    margin-right: auto
+
+
+
+// pictures
+
+
+
+.pictures
+  margin: 0 auto
+  top: 1000px
+  img
+    background-size: cover
+    border: lightgrey 1px solid
+    max-width: 100%
+    max-height: 125px
+    margin-bottom: 25px
+    //position: relative
+    opacity: 0
+    transform: translateX(20px)
+    transition: all 0.3s ease-in-out
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+
+@keyframes v1move
+  0%
+    left : 0
+  100%
+    left: -600px
+
+
+
+.cadre
+  position: relative
+  width: 600px
+  height: 300px
+  border: 1px grey solid
+  margin: 0 auto
+  overflow-x: hidden
+  .vague1
+    position: absolute
+    width: 1200px
+    height: 210px
+    bottom: 0
+    left: 0
+    transition: transform 20s
+    z-index: 5
+    background:
+      image : url('../images/vagues/vague1n.png')
+      repeat : no-repeat
+      position: bottom left
+    animation: v1move 40s infinite
+  .vague2
+    position: absolute
+    width: 1200px
+    height: 210px
+    bottom: 0
+    left: 0
+    z-index: 3
+    transition: transform 20s
+    background:
+      image : url('../images/vagues/vague2n.png')
+      repeat : no-repeat
+      position: bottom left
+    animation: v1move 80s infinite
+  .vague3
+    position: absolute
+    width: 1200px
+    height: 210px
+    bottom: 0
+    left: 0
+    transition: transform 20s
+    z-index: 4
+    background:
+      image : url('../images/vagues/vague3n.png')
+      repeat : no-repeat
+      position: bottom left
+    animation: v1move 60s infinite
